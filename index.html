@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    *{
+        box-sizing:border-box;
+    }
+    body{
+        width:100%;
+        height:100%;
+        margin:0px;
+        }
+        nav{
+            width:100%;
+            position:fixed;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:fixed;
+            left:0px;
+            top:0px;
+            z-index:9;
+            }
+            .menu{
+
+                background-color:lemonchiffon;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right:30px;
+                position:fixed;
+            left:0px;
+            top:0px;
+                }
+            .list{
+                font-size:24px;
+                margin-right:50px;
+                }  
+        main{
+                width:50%;
+                height:2000px;
+                background-color:gray;
+              margin:auto;
+
+                display:flex;
+            }
+            .container{
+                width:100%;
+                height:500px;
+        background-color:grey;
+            }
+            .logo{
+                width:100px;
+                height:500px;
+                 margin: 10px;
+                padding: 10px;
+                }
+
+
+
+     /*以下是圖片slider效果*/ 
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      /*font-size: 14px;刪除*/
+     /* color: #000;刪除*/
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 50%;
+      height: 70%;
+      margin-top:500px;
+     
+      
+    }
+
+    .swiper-slide {
+      text-align: center;
+
+      /*font-size: 18px;刪除以*/
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+    <nav class="menu" >
+        <img src="img/logo.jpg" style="width: 100px; height: 100px;" class="logo">
+    
+        <div class="list">
+            <a href="#">回首頁 |</a>
+            <a href="#">網站導覽 |</a>
+            <a href="#">關於我們 |</a></li>
+            <a href="#">聯絡我們 |</a></li>
+         </div>
+  
+    </nav>
+
+
+    /*以下是圖片slider效果*/
+  <!-- Swiper -->
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/img/iho-veg.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/img/iho-act1.png" alt=""></div>
+                <div class="swiper-slide"><img src="/img/iho-act2.png" alt=""></div>
+                 <div class="swiper-slide"><img src="/img/iho-farm2.jpg" alt=""></div>
+                 <div class="swiper-slide"><img src="/img/logo.jpg" alt=""></div>
+                 <div class="swiper-slide">Slide 6</div>
+                 <div class="swiper-slide">Slide 7</div>
+                 <div class="swiper-slide">Slide 8</div>
+                 <div class="swiper-slide">Slide 9</div>
+                 <div class="swiper-slide">Slide 10</div>
+         </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <main>
+    <div class="container">12345</div>
+  </main>
+</body>
+
+</html>
